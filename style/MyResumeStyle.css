@@ -1,0 +1,453 @@
+/*---------- General Styling ----------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: Neue Montreal, sans-serif;
+    line-height: 1.2;
+    color: #161616;
+    overflow-x: hidden;
+}
+
+/*---------- Utility Classes ---------*/
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.text-primary {
+    color: #3693ff;
+}
+
+/*---------- Navbar ----------*/
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #161616;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    border-bottom: 3px solid #3693ff;
+}
+
+#navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar h2 a{
+    text-decoration: none;
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#navbar li a:hover {
+    background-color: #3693ff;
+}
+
+/*---------- Showcase Area -----------*/
+
+#showcase {
+    background: url(../images/Typewriter3.jpg) no-repeat center center/cover;
+    height: 90vh;
+}
+
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    color: #fff;
+}
+
+.showcase-content h1 {
+    font-size: 8rem;
+    margin-bottom: 3.5rem;    
+}
+
+.showcase-content .btn {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.showcase-content .btn:hover {
+    background: #fff;
+    color: #3693ff;
+}
+
+.btn {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1.5px solid #fff;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.line-1 {
+    border-right: 3.5px solid #3693ff;
+    padding-right: 1rem;
+}
+
+/*----------- Section: Story ----------*/
+
+#story {
+    padding: 7rem 0;
+    margin-bottom: -10rem;
+}
+
+#story h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+#story h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem; 
+}
+
+#story p.lead {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#story .story-content {
+    display: flex;
+}
+
+#story .story-text,
+#story .story-image {
+    flex: 1;
+}
+
+#story .story-text {
+    text-align: justify;
+}
+
+#story .story-image img{
+    display: block;
+    margin-left: 15rem;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+#story header {
+    color: #fff;    
+}
+
+.ellipse-container {
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 3rem;
+}
+
+.ellipse {
+    border-radius: 50%;
+    position: absolute;
+    top: -4rem;
+    border-style: solid;
+    left: 9.8rem;
+}
+
+.ellipse__outer--thin {
+    width: 80%;
+    height: 80%;
+    border-width: 1px;
+    border-color: rgba(9,56,62,0.1);
+    animation: ellipseOrbit 15s ease-in-out infinite;
+}
+
+.ellipse__outer--thin:after {
+    content: "";
+    background-image: url(file:///D:/61281Viana/images/ellipsedial.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #000;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.ellipse__outer--thick {
+    width: 80%;
+    height: 80%;
+    border-color: #3693ff transparent;
+    border-width: 2px;
+    transform: rotate(-45deg);
+    animation: ellipseRotate 15s ease-in-out infinite;
+}
+
+.ellipse__orbit {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-width: 2px;
+    border-color: #3693ff;
+    top: 1rem;
+    right: auto;
+}
+
+.ellipse__orbit:before {
+    content:'';
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #3693ff;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.behance-button {
+    color: #3693ff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 1.5px solid #3693ff;
+    border-radius: 10px;
+    font-weight: 450;
+    font-size: 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.behance-button:hover {
+    background: #3593ff;
+    color: #fff;
+}
+
+/*----------- Section: Skill ----------*/
+
+#skill {
+    padding: 7rem 0;
+    margin-bottom: 1rem;
+    background: #161616;
+    height: 105vh;
+}
+
+#skill .skill-content {
+    display: flex;
+}
+
+.skill-content .skill-heading {
+    text-align: justify;
+    font-size: 6rem;
+    display: inline-block;
+    float: left;
+    position: relative;
+    letter-spacing: 0.2px;
+    left: -15rem;
+    top: -4rem;
+    margin: 0;
+    transform: rotate(-90deg) translateY(50%);
+}
+
+.column {
+    margin-top: 3rem;
+    width: 50%;
+}
+
+.icon ion-icon {
+      font-size: 10rem;
+      color: #3693ff;
+      animation: ellipseRotate 2s ease-in-out alternate-reverse infinite;
+}
+
+.icon-title {
+      font-size: 1.5rem;
+      margin-bottom: 8rem;
+      color: #fff;
+      font-weight: lighter;
+}
+
+/*---------- Section: Portfolio ----------*/
+
+#portfolio {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    vertical-align: baseline;
+    padding-top: 8rem;
+    margin-bottom: 10rem;
+}
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#portfolio h1 {
+    color: #161616;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+#portfolio p {
+    color: #161616;
+    font-size: 1.2rem;
+    font-weight: 450;
+    margin-bottom: 5rem;
+    letter-spacing: 0.2px;
+}
+
+#portfolio .header {
+    margin: 100px 0 200px 120px;
+}
+
+#portfolio .header p {
+    width: 60%;
+}
+
+.work {
+    text-align: center;
+    width: 100%;
+}
+
+.work img {
+    margin: 2%;
+    width: 45%;
+}
+
+#portfolio .header2 {
+    margin: 100px 0 100px -1px;
+}
+
+.work2 {
+    text-align: center;
+    width: 100%;
+    background-color: #000;
+}
+
+.work2 img {
+    margin: 1%;
+    width: 30%;
+}
+
+/*---------- Section: Contact ----------*/
+
+.contact {
+    background: #161616;
+    border-top: 2.5rem solid #161616;
+}
+
+
+#media, #address, #mail {
+    text-align: center;
+}
+
+.contact .container {
+    padding: 160px 0;
+}
+
+.contact li, p, h4 {
+    font-size: 1.2rem;
+}
+
+.contact h4 {
+    font-weight: lighter;
+    color: #fff;
+}
+
+.contact p {
+    color: #3693ff;
+    font-weight: bold;
+}
+
+.contact li {
+    font-weight: lighter;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 1.8rem;
+}
+
+#media ul {
+    list-style: none;
+}
+
+#media ul li {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+@media(max-width: 900px) {
+    .contact .container {
+        width: 92%;
+      }
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3693ff;
+}
+
+/*---------- Animation ----------*/
+
+.anim-typewriter{
+    animation: blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: #3693ff;}
+    to{border-right-color: transparent;}
+}
+
+@keyframes ellipseRotate {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes ellipseOrbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
